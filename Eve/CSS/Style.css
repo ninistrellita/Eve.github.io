@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .contenedor-principal {
@@ -20,76 +21,138 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 20px;
 }
 
+/* Glassmorphism en la Tarjeta */
 .tarjeta-bienvenida {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 40px 50px;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(255, 141, 161, 0.3);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 35px 40px;
+    border-radius: 28px;
+    box-shadow: 0 15px 35px rgba(255, 141, 161, 0.35);
     text-align: center;
-    max-width: 450px;
-    width: 90%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    max-width: 480px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+/* Avatar / Foto Principal */
+.avatar-contenedor {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, #ff8da1, #ffb9e2);
+    box-shadow: 0 8px 20px rgba(255, 101, 132, 0.3);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: 32px;
     color: #ff6584;
     margin-bottom: 8px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: latido 3s ease-in-out infinite;
 }
 
 .subtitulo {
     font-size: 15px;
-    color: #777;
-    margin-bottom: 30px;
+    color: #555;
+    margin-bottom: 15px;
     font-style: italic;
+    min-height: 22px; /* Mantiene la altura mientras se escribe */
 }
 
+/* Estilos del Contador */
+.contador-contenedor {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 15px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 141, 161, 0.2);
+}
+
+.contador-titulo {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.contador-tiempo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff6584;
+}
+
+.pregunta {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+/* Botones */
 .botones {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .botones .btn {
     display: block;
     text-decoration: none;
-    background-color: #ffb9e2;
+    background: linear-gradient(135deg, #ffb9e2, #ff8da1);
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     padding: 14px 28px;
     border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(255, 185, 226, 0.4);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(255, 141, 161, 0.4);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .botones .btn:hover {
-    background-color: #ff8da1;
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 8px 20px rgba(255, 141, 161, 0.6);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 22px rgba(255, 141, 161, 0.6);
 }
 
-p {
-    font-size: 18px;
-    color: #000000;
-    margin-bottom: 20px;
+/* Botón de Música Flotante */
+.btn-musica {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #ffffff;
+    color: #ff6584;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 1000;
 }
 
-h1 {
-    animation: latido 4s ease-in-out infinite;
+.btn-musica:hover {
+    transform: scale(1.1);
+    background: #ffb9e2;
+    color: #fff;
 }
 
 @keyframes latido {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.15);
-    }
-    100% {
-      transform: scale(1);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
 }

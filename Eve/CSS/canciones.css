@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #12090d;
+    color: #ffffff;
+    padding-bottom: 90px; 
+}
+
+
+.contenedor-playlist {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+
+.header-playlist {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.portada-playlist img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(255, 101, 132, 0.3);
+}
+
+.info-playlist .etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffb9e2;
+}
+
+.info-playlist h1 {
+    font-size: 38px;
+    margin: 10px 0;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.info-playlist .descripcion {
+    color: #e0b0bc;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.meta-info {
+    font-size: 13px;
+    color: #e0b0bc;
+}
+
+
+.acciones-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+
+.btn-play-gigante {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #ff6584;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 101, 132, 0.4);
+}
+
+.btn-play-gigante:hover {
+    transform: scale(1.05);
+    background-color: #ff8da1;
+    box-shadow: 0 6px 20px rgba(255, 141, 161, 0.6);
+}
+
+.btn-volver {
+    color: #ffb9e2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.btn-volver:hover {
+    color: #ffffff;
+}
+
+
+.encabezado-tabla {
+    display: grid;
+    grid-template-columns: 40px 2fr 1fr 60px;
+    padding: 0 16px 10px;
+    color: #ffb9e2;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 141, 161, 0.2);
+}
+
+.fila-cancion {
+    display: grid;
+    grid-template-columns: 40px 2fr 1fr 60px;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.fila-cancion:hover {
+    background-color: rgba(255, 185, 226, 0.15);
+}
+
+
+.fila-cancion.activa {
+    background-color: rgba(255, 101, 132, 0.2);
+}
+
+.fila-cancion.activa .titulo-cancion {
+    color: #ff6584;
+}
+
+.col-num {
+    color: #ffb9e2;
+    font-size: 14px;
+}
+
+
+.col-titulo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.img-cancion-wrapper {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.img-cancion-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+.overlay-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 101, 132, 0.6);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.fila-cancion:hover .overlay-play {
+    opacity: 1;
+}
+
+.overlay-play i {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.info-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-cancion {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.artista-cancion {
+    font-size: 13px;
+    color: #e0b0bc;
+}
+
+.col-album, .col-duracion {
+    color: #e0b0bc;
+    font-size: 13px;
+}
+
+
+.reproductor-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #1a0c12;
+    border-top: 1px solid rgba(255, 141, 161, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.cancion-actual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 25%;
+}
+
+.cancion-actual img {
+    width: 52px;
+    height: 52px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 185, 226, 0.3);
+}
+
+.detalles-cancion {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-track {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.artista-track {
+    font-size: 12px;
+    color: #ffb9e2;
+}
+
+.controles-reproductor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.botones-control {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 6px;
+}
+
+.botones-control button {
+    background: none;
+    border: none;
+    color: #ffb9e2;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.botones-control button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.btn-play-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ff6584 !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px !important;
+    box-shadow: 0 2px 8px rgba(255, 101, 132, 0.5);
+}
+
+.btn-play-circle:hover {
+    transform: scale(1.08) !important;
+    background-color: #ff8da1 !important;
+}
+
+.barra-progreso-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 11px;
+    color: #ffb9e2;
+}
+
+.barra-progreso {
+    flex-grow: 1;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progreso-linea {
+    height: 100%;
+    width: 0%;
+    background-color: #ff6584;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(255, 101, 132, 0.8);
+}
+
+.control-volumen {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    justify-content: flex-end;
+    color: #ffb9e2;
+}
+
+.control-volumen input {
+    accent-color: #ff6584;
+    cursor: pointer;
+}

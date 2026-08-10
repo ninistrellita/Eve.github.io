@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones</title>
+    <link rel="stylesheet" href="../CSS/canciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="contenedor-playlist">
+
+        <header class="header-playlist">
+            <div class="portada-playlist">
+                <img src="../img/sunsun.jpe" alt="Portada de la Playlist">
+            </div>
+            <div class="info-playlist">
+                <span class="etiqueta">PLAYLIST PARA EVELYN</span>
+                <h1>TE AMO</h1>
+                <p class="descripcion">No me gusta dedicar canciones, pero estas son dedicadas a ti.</p>
+                <div class="meta-info">
+                    <span class="creador">Para: Evelyn</span> • <span id="total-canciones">0 canciones</span>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="acciones-bar">
+            <button id="btn-play-principal" class="btn-play-gigante">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <a href="../Index.html" class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+        </div>
+
+        <!-- Tabla de Canciones -->
+        <section class="lista-canciones">
+            <div class="encabezado-tabla">
+                <span class="col-num">#</span>
+                <span class="col-titulo">TÍTULO</span>
+                <span class="col-album">ÁLBUM</span>
+                <span class="col-duracion"><i class="fa-regular fa-clock"></i></span>
+            </div>
+            <div class="linea-divisora"></div>
+
+       
+            <div id="contenedor-canciones" class="filas-canciones"></div>
+        </section>
+    </main>
+
+   
+    <footer class="reproductor-inferior">
+        <div class="cancion-actual">
+            <img id="player-img" src="../img/default-album.jpg" alt="Portada">
+            <div class="detalles-cancion">
+                <span id="player-titulo" class="titulo-track">Selecciona una canción</span>
+                <span id="player-artista" class="artista-track">---</span>
+            </div>
+        </div>
+
+        <div class="controles-reproductor">
+            <div class="botones-control">
+                <button id="btn-prev"><i class="fa-solid fa-backward-step"></i></button>
+                <button id="btn-play-pause" class="btn-play-circle"><i class="fa-solid fa-play"></i></button>
+                <button id="btn-next"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+            <div class="barra-progreso-contenedor">
+                <span id="tiempo-actual">0:00</span>
+                <div class="barra-progreso" id="barra-progreso">
+                    <div class="progreso-linea" id="progreso-linea"></div>
+                </div>
+                <span id="tiempo-total">0:00</span>
+            </div>
+        </div>
+
+        <div class="control-volumen">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" id="volumen" min="0" max="1" step="0.01" value="0.8">
+        </div>
+
+  
+        <audio id="audio-player"></audio>
+    </footer>
+
+    <script src="../Js/canciones.js"></script>
+</body>
+</html>

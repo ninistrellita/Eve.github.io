@@ -3,21 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eve</title>
+    <title>Eve 💗</title>
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
+
+    <audio id="musica-fondo" loop>
+        <source src="musica/musica-fondo.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="btn-musica" class="btn-musica" title="Reproducir / Pausar música">
+        🎵
+    </button>
+
     <main class="contenedor-principal">
         <div class="tarjeta-bienvenida">
             <header>
+                <!-- Foto o Avatar opcional -->
+                <div class="avatar-contenedor">
+                    <img src="img/imagen1.jpeg" alt="Nosotros" class="avatar-img">
+                </div>
+
                 <h1>Para: Mi amor 💗</h1>
-                <p class="subtitulo">Un pedacito de lo mucho que te amo</p>
-                <p>¿Qué quieres ver?</p>
+                <p id="tipeo-texto" class="subtitulo"></p>
+                
+                <!-- Contador de tiempo -->
+                <div class="contador-contenedor">
+                    <p class="contador-titulo">Tiempo desde que nos conocimos:</p>
+                    <div id="contador" class="contador-tiempo">Cargando...</div>
+                </div>
             </header>
+
+            <p class="pregunta">¿Qué quieres ver hoy?</p>
+
             <section class="botones">
-                <a href="views/porque.html" class="btn">Porque te amo</a>
+                <a href="views/porque.html" class="btn">¿Porque te amo?</a>
+                <a href="views/historia.html" class="btn">Línea de Tiempo / Nuestra Historia</a>
+                <a href="views/canciones.html" class="btn">Canciones que en secreto te dedique</a>
+                <a href="views/carta.html" class="btn">Carta Secreta</a>
             </section>
         </div>
     </main>
+
+    <script src="Js/index.js"></script>
 </body>
 </html>
