@@ -339,3 +339,79 @@ body {
     accent-color: #ff6584;
     cursor: pointer;
 }
+
+
+@media (max-width: 800px) {
+    .encabezado-tabla,
+    .fila-cancion {
+        grid-template-columns: 30px 1fr 50px; 
+    }
+
+    .col-album {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-playlist {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .portada-playlist img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info-playlist h1 {
+        font-size: 28px;
+    }
+
+    .reproductor-inferior {
+        height: 75px;
+        padding: 0 10px;
+    }
+
+    .cancion-actual {
+        width: 35%;
+        gap: 8px;
+    }
+
+    .cancion-actual img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .titulo-track {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 85px;
+    }
+
+    .artista-track {
+        font-size: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 85px;
+    }
+
+    .controles-reproductor {
+        width: 65%;
+    }
+
+    .botones-control {
+        gap: 12px;
+        margin-bottom: 3px;
+    }
+
+
+    .control-volumen {
+        display: none;
+    }
+}

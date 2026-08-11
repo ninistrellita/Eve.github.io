@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Secreta 💌</title>
+    <link rel="stylesheet" href="../CSS/carta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="contenedor-carta">
+
+        <div id="pantalla-candado" class="pantalla-candado">
+            <div class="tarjeta-candado">
+                <i class="fa-solid fa-lock icono-candado"></i>
+                <h2>Carta Secreta 💌</h2>
+                <p>Ingresa la fecha especial para abrir la carta (el mes y el dia jeje)</p>
+                <div class="input-box">
+                    <input type="password" id="clave-input" placeholder="Ingresa la clave...">
+                    <button id="btn-desbloquear"><i class="fa-solid fa-key"></i></button>
+                </div>
+                <p id="mensaje-error" class="error-msg"></p>
+                <a href="../Index.html" class="btn-volver-candado"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+            </div>
+        </div>
+
+
+        <div id="seccion-carta" class="seccion-carta oculta">
+            
+            <header class="header-carta">
+                <a href="../Index.html" class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+                <h1>Una carta solo para ti 💌</h1>
+            </header>
+
+            <div class="contenedor-sobre">
+                <div class="sobre" id="sobre">
+                    <div class="solapa"></div>
+                    <div class="cuerpo-sobre"></div>
+                    <div class="papel-carta">
+                        <div class="contenido-papel">
+                            <h2>Mi amor,</h2>
+                            <p class="texto-carta">
+                                Si estás leyendo esto es porque descubriste la clave secreta... 
+                                <br><br>
+                                Quiero recordarte otra vez lo mucho que te amo y lo feliz que soy
+                                al saber que eres parte de mi vida. Se que tenemos nuestras diferencias,
+                                que muchas veces discutimos y no estamos de acuerdo en muchas cosas, nada de eso
+                                hara que te ame menos, al contrario, me hace amarte más y más cada día.
+                                No tienes ni idea de lo mucho que te amo, creo que ni la mitad he llegado 
+                                a demostrarte y siento que te lo he demostrado demasiado. 
+                                <br><br>
+                                Prometo estar siempre para ti, y de demostrarte mi amor cada dia, por el resto de mi vida.
+                                <br><br>
+                                <strong>Te amo con todo mi corazón. 💗</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="indicacion-click"> Haz clic en el sobre para abrir la carta </p>
+        </div>
+
+    </main>
+
+    <script src="../JS/carta.js"></script>
+</body>
+</html>

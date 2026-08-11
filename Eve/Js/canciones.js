@@ -10,24 +10,107 @@ document.addEventListener('DOMContentLoaded', () => {
             portada: "../img/img canciones/img1.jpe",
             audio: "../musica/una y otra vez.mp3"
         },
+        
         {
             id: 1,
-            titulo: "Lover",
+            titulo: "Especial",
+            artista: "Eladio Carrion",
+            album: "Sauce Boyz Care Package",
+            duracion: "2:45",
+            portada: "../img/img canciones/img3.jpe",
+            audio: "../musica/Especial.mp3"
+        },
+         {
+            id: 2,
+            titulo: "Moonstruck",
+            artista: "Enhypen",
+            album: "ROMANCE:UNTOLD",
+            duracion: "2:38",
+            portada: "../img/img canciones/img8.jpe",
+            audio: "../musica/moonstruck.mp3"
+        },
+        {
+            id: 3,
+            titulo: "Hummingbird",
             artista: "Metro Boomin, James Blake",
-            album: "Hummingbird",
+            album: "METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNTRACK FROM & INSPIRED BY THE MOTION PICTURE)",
             duracion: "5:19",
-            portada: "../img/img canciones/img2.jpe",
+            portada: "../img/img canciones/img4.jpe",
             audio: "../musica/hummingbird.mp3"
         },
         {
-            id: 2,
-            titulo: "Yellow",
-            artista: "Coldplay",
-            album: "Parachutes",
-            duracion: "4:26",
-            portada: "../img/img canciones/img3.jpe",
-            audio: "../musica/yellow.mp3"
+            id: 4,
+            titulo: "444",
+            artista: "Yan Block",
+            album: "Panda Block",
+            duracion: "2:55",
+            portada: "../img/img canciones/img6.jpe",
+            audio: "../musica/444.mp3"
+        },
+        {
+            id: 5,
+            titulo: "Mirros",
+            artista: "Justin Timberlake",
+            album: "The 20/20 Experience",
+            duracion: "4:44",
+            portada: "../img/img canciones/img7.jpe",
+            audio: "../musica/mirros.mp3"
+        },
+        {
+            id: 6,
+            titulo: "Best Part",
+            artista: "Daniel Caesar, H.E.R.",
+            album: "Freudian",
+            duracion: "3:29",
+            portada: "../img/img canciones/img8.jpe",
+            audio: "../musica/best part.mp3"
+        },
+        {
+            id: 7,
+            titulo: "Double Take",
+            artista: "Dhruv",
+            album: "rapunzel",
+            duracion: "2:51",
+            portada: "../img/img canciones/img9.jpe",
+            audio: "../musica/double take.mp3"
+        },
+        {
+            id: 8,
+            titulo: "My One And Only Love",
+            artista: "Mon Laferte",
+            album: "FEMME FATALE",
+            duracion: "3:01",
+            portada: "../img/img canciones/img10.jpe",
+            audio: "../musica/my one and only love.mp3"
+        },
+        {
+            id: 9,
+            titulo: "I Like Me Better",
+            artista: "Lauv",
+            album: "I Like Me Better",
+            duracion: "3:17",
+            portada: "../img/img canciones/img11.jpe",
+            audio: "../musica/i like me better.mp3"
+        },
+        {
+            id: 10,
+            titulo: "Aquel Nap Zzzz",
+            artista: "Rauw Alejandro",
+            album: "VICE VERSA",
+            duracion: "4:55",
+            portada: "../img/img canciones/img12.jpe",
+            audio: "../musica/aquel nap zzzz.mp3"
+        },
+        {
+            id: 11,
+            titulo:"Afuera Del Planeta",
+            artista:"Manuel Medrano",
+            album:"Manuel Medrano",
+            duracion:"3:49",
+            portada:"../img/img canciones/img13.jpe",
+            audio:"../musica/afuera del planeta.mp3"
         }
+        
     ];
 
 
